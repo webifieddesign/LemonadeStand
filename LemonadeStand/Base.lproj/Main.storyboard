@@ -16,10 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LemonadeStandUIbackground" translatesAutoresizingMaskIntoConstraints="NO" id="68A-VA-rer">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LemonadeStandBackground" translatesAutoresizingMaskIntoConstraints="NO" id="68A-VA-rer">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                </variation>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mild" translatesAutoresizingMaskIntoConstraints="NO" id="k9t-VC-Utv" userLabel="weather">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="-1" width="375" height="334"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ice" translatesAutoresizingMaskIntoConstraints="NO" id="gEJ-E5-6Qe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="34" y="156" width="62" height="55"/>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J51-ZX-O9I" userLabel="ownIceLabel">
@@ -33,6 +45,12 @@
                                     <rect key="frame" x="42" y="167" width="36" height="38"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lemon" translatesAutoresizingMaskIntoConstraints="NO" id="jpg-7a-kiC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="66" width="62" height="55"/>
+                                </variation>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-cE-Qgw" userLabel="ownLemonLabel">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -66,7 +84,7 @@
                                     <action selector="purchaseLemonButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FCt-rL-6rV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7p-rW-jOz" userLabel="unpurchaseLemonButton">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7p-rW-jOz" userLabel="unpurchaseLemonButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="SubtractButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,7 +119,7 @@
                                     <action selector="purchaseIceButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fht-jh-2gX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoL-FR-sDa" userLabel="unpurchaseIceButton">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoL-FR-sDa" userLabel="unpurchaseIceButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="SubtractButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -136,7 +154,7 @@
                                     <action selector="mixLemonButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcv-gk-hTq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-In-lco" userLabel="unmixLemonButton">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2m-In-lco" userLabel="unmixLemonButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="SubtractButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,7 +188,7 @@
                                     <action selector="mixIceButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAI-U6-N9Z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7S-rO-mD9" userLabel="unmixIceButton">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7S-rO-mD9" userLabel="unmixIceButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" backgroundImage="SubtractButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,12 +222,81 @@
                                     <rect key="frame" x="172" y="432" width="74" height="53"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the lemonade stand to start the day!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpb-Ma-1y9">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                    <rect key="frame" x="19" y="638" width="362" height="23"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Own" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io6-Gg-Z8q" userLabel="ownLemonLabel">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                    <rect key="frame" x="37" y="12" width="55" height="37"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnT-aS-gjc" userLabel="ownLemonLabel">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                    <rect key="frame" x="167" y="12" width="55" height="37"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s97-d0-rv8" userLabel="ownLemonLabel">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                    <rect key="frame" x="280" y="12" width="55" height="37"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customer" translatesAutoresizingMaskIntoConstraints="NO" id="KVY-pZ-xxI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="475" width="53" height="96"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Customers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PI-Tp-Kx1">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                    <rect key="frame" x="-3" y="572" width="109" height="23"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMA-6U-pZc">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                    <rect key="frame" x="-3" y="596" width="109" height="23"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="68A-VA-rer"/>
+                                <exclude reference="k9t-VC-Utv"/>
+                                <exclude reference="gEJ-E5-6Qe"/>
                                 <exclude reference="J51-ZX-O9I"/>
+                                <exclude reference="jpg-7a-kiC"/>
                                 <exclude reference="ez5-cE-Qgw"/>
                                 <exclude reference="2cE-hp-dgy"/>
                                 <exclude reference="OJL-sD-96Y"/>
@@ -225,12 +312,22 @@
                                 <exclude reference="g7S-rO-mD9"/>
                                 <exclude reference="uMh-Fo-HfM"/>
                                 <exclude reference="zQJ-TA-hJq"/>
+                                <exclude reference="vpb-Ma-1y9"/>
+                                <exclude reference="Io6-Gg-Z8q"/>
+                                <exclude reference="xnT-aS-gjc"/>
+                                <exclude reference="s97-d0-rv8"/>
+                                <exclude reference="KVY-pZ-xxI"/>
+                                <exclude reference="6PI-Tp-Kx1"/>
+                                <exclude reference="EMA-6U-pZc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="68A-VA-rer"/>
+                                <include reference="k9t-VC-Utv"/>
+                                <include reference="gEJ-E5-6Qe"/>
                                 <include reference="J51-ZX-O9I"/>
+                                <include reference="jpg-7a-kiC"/>
                                 <include reference="ez5-cE-Qgw"/>
                                 <include reference="2cE-hp-dgy"/>
                                 <include reference="OJL-sD-96Y"/>
@@ -246,17 +343,25 @@
                                 <include reference="g7S-rO-mD9"/>
                                 <include reference="uMh-Fo-HfM"/>
                                 <include reference="zQJ-TA-hJq"/>
+                                <include reference="vpb-Ma-1y9"/>
+                                <include reference="Io6-Gg-Z8q"/>
+                                <include reference="xnT-aS-gjc"/>
+                                <include reference="s97-d0-rv8"/>
+                                <include reference="KVY-pZ-xxI"/>
+                                <include reference="6PI-Tp-Kx1"/>
+                                <include reference="EMA-6U-pZc"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="buyIceLabel" destination="bVv-0S-U1i" id="SR1-0v-ibg"/>
                         <outlet property="buyLemonsLabel" destination="2cE-hp-dgy" id="s0f-H9-AsA"/>
+                        <outlet property="customerCountLabel" destination="EMA-6U-pZc" id="Cbb-kx-rBY"/>
                         <outlet property="mixIceButton" destination="Hsr-io-OTG" id="u9Y-c7-k19"/>
                         <outlet property="mixIceLabel" destination="KFF-j1-RcA" id="6fq-C0-s01"/>
                         <outlet property="mixLemonButton" destination="Mif-26-xxN" id="G3w-wK-KOG"/>
                         <outlet property="mixLemonsLabel" destination="3Ix-FZ-MNb" id="UHd-JI-Q2l"/>
-                        <outlet property="moneyLabel" destination="zQJ-TA-hJq" id="Ssl-MJ-FXW"/>
+                        <outlet property="moneyLabel" destination="zQJ-TA-hJq" id="GnQ-JT-yie"/>
                         <outlet property="ownIceLabel" destination="J51-ZX-O9I" id="Ia5-Fv-ERk"/>
                         <outlet property="ownLemonsLabel" destination="ez5-cE-Qgw" id="T4E-E1-OWh"/>
                         <outlet property="purchaseIceButton" destination="OQb-IG-cia" id="Vc4-K7-Iex"/>
@@ -265,6 +370,7 @@
                         <outlet property="unmixLemonButton" destination="V2m-In-lco" id="amg-C6-bfo"/>
                         <outlet property="unpurchaseIceButton" destination="SoL-FR-sDa" id="3PC-WZ-wiJ"/>
                         <outlet property="unpurchaseLemonButton" destination="z7p-rW-jOz" id="QoO-R9-Ep4"/>
+                        <outlet property="weatherImageView" destination="k9t-VC-Utv" id="ElE-fG-KtL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -274,8 +380,12 @@
     </scenes>
     <resources>
         <image name="AddButton" width="24" height="24"/>
+        <image name="Ice" width="54" height="53"/>
+        <image name="Lemon" width="62" height="56"/>
         <image name="LemonadeStand" width="311" height="300"/>
-        <image name="LemonadeStandUIbackground" width="375" height="667"/>
+        <image name="LemonadeStandBackground" width="375" height="667"/>
         <image name="SubtractButton" width="24" height="24"/>
+        <image name="customer" width="470" height="806"/>
+        <image name="mild" width="379" height="333"/>
     </resources>
 </document>
